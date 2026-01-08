@@ -2,7 +2,7 @@
 source("ggplot-theme.R")
 
 # データの読み込み
-height_data <- readr::read_csv("height-data.csv")
+height_data <- readr::read_csv("data/height-data.csv")
 
 # ヒストグラムのパラメータ
 boundary <- 160.5
@@ -30,7 +30,7 @@ histogram <-
   )
 
 ggplot2::ggsave(
-  filename = "height-histogram.pdf",
+  filename = "plot/height-histogram.pdf",
   plot = histogram,
   width = 10,
   height = 10,

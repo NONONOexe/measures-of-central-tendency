@@ -4,8 +4,8 @@
 
 # パラメータ
 height_mean <- 171.1 # 平均
-height_sd   <-  5.52 # 標準偏差
-n           <- 25    # 標本数
+height_sd <- 5.52 # 標準偏差
+n <- 25 # 標本数
 
 # ランダムシードの設定
 set.seed(123)
@@ -14,7 +14,7 @@ set.seed(123)
 height <-
   rnorm(n, mean = height_mean, sd = height_sd) |>
   round() |> # 四捨五入
-  sort()     # 昇順にソート
+  sort() # 昇順にソート
 
 # 身長データをデータフレームに変形
 height_data <- dplyr::tibble(
@@ -23,4 +23,4 @@ height_data <- dplyr::tibble(
 )
 
 # 身長データの書き込み
-readr::write_csv(height_data, "height_data.csv")
+readr::write_csv(height_data, "data/height_data.csv")

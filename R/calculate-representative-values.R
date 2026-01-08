@@ -1,5 +1,5 @@
 # データの読み込み
-height_data <- readr::read_csv("height-data.csv")
+height_data <- readr::read_csv("data/height-data.csv")
 
 # 平均値
 height_mean <- mean(height_data$height)
